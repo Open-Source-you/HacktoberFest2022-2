@@ -1,0 +1,58 @@
+/* css Reset (basic things to be done) */
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* navigation bar */
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#logo{
+    margin: 10px 10px;
+}
+#logo img{
+    height: 60px;
+    width: 60px;
+    
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    color: white;
+    text-decoration: none;
+/* is se underline chale jayega */
+    border-radius: 20px;
+    display: block;
+    padding: 3px 22px;
+
+}
+
+#navbar ul li a:hover{
+    background-color: cyan;
+    color: black;
+}

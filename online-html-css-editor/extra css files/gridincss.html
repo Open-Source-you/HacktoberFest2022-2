@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid spanning</title>
+    <style>
+        .container{
+            display: grid;
+
+            grid-template-columns: repeat(5,3fr);
+            grid-template-rows: repeat(2,2fr);
+            grid-column-gap: 2rem;
+            grid-row-gap: 1rem;
+
+        }
+        .box{
+            border: 2px solid green;
+            background-color: rgb(235, 196, 235);
+            padding: 20px;
+        }
+
+        .box:nth-child(2){
+            grid-column-start: 2;
+            grid-column-end: 4;
+            /* start from line 2 to line 4*/
+
+           grid-row-start: 1;
+            grid-row-end: 3;
+            /*start from line 1 to line 3 */
+            
+        }
+        .box:nth-child(8){
+            grid-column: 2 /span 3;
+            /* starting from 2nd collumn spanning 3 columns */
+
+            grid-row: 3 /span 2;
+            /* starting from 3rd row span 2 rows */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+        <div class="box">Item-7</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-9</div>
+        <div class="box">Item-11</div>
+        <div class="box">Item-22</div>
+        <div class="box">Item-33</div>
+        <div class="box">Item-44</div>
+        <div class="box">Item-55</div>
+        <div class="box">Item-66</div>
+        <div class="box">Item-77</div>
+        <div class="box">Item-88</div>
+        <div class="box">Item-99</div>
+    </div>
+</body>
+</html>
